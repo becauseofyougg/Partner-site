@@ -31,6 +31,11 @@ $(document).ready(function(){
       });
 });
 
+// $(".menu-btn").click(function () {
+//   $("ul").toggle();
+//   $(this).children('.fa').toggleClass('fa-chevron-up fa-chevron-down');
+// });
+
 /*  dropdown content */
 function myFunction() {
   document.getElementById("myDropdown").classList.toggle("show");
@@ -106,7 +111,36 @@ window.onclick = function(event) {
     
 
 
-customURL = 'https://makeup-api.herokuapp.com/api/v1/products.json?brand=maybelline';
+// customURL = 'https://makeup-api.herokuapp.com/api/v1/products.json?brand=maybelline';
 
-let carousel = $('.owl-carousel');
+// let carousel = $('.owl-carousel');
 
+// let filteredList = Array.prototype
+//   .map((n,r) => {
+//     return {
+//       name: n.name,
+//       price: r.price
+//     };
+//   })
+//   .filter(r => {
+//     return parseFloat(r.price) <= 5.0;
+//   }); 
+
+  
+// function sendRequest(method, url,body = null){
+//   return fetch(url)
+//         .then(response => {
+//           return response.json()
+//         })
+// }
+// let carousel = $('.owl-carousel')
+// requestURL = 'abc.com'
+// sendRequest('GET',requestURL)
+// .then(data => {
+//   const costFiveOrLessItems = data.filter(...);
+  //select carousel
+  //iterate over costFiveOrLessItems 
+    //create element for each index with data from object
+    //add it to the carousel     
+
+// .catch(err => console.log(err))

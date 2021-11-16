@@ -37,12 +37,16 @@ html,
 body {
     height: 100%;
     line-height: 1;
-    font-size: 16px;
+    font-size: 18px;
     color: #000;
     
 }
 
 .wrapper {
+    margin-left:auto;
+    margin-right:auto;
+    height:auto; 
+    width:auto;
     min-width: 100%;
     overflow: hidden;
 }
@@ -51,9 +55,6 @@ body {
   background: #292929 0% 0% no-repeat padding-box;
   font-family: 'Source Sans Pro', sans-serif;
 }
-
-
-
 
 /* all similar content styling codes */
 
@@ -74,17 +75,17 @@ section{
     padding: 30px 0;
     font-family: 'Source Sans Pro', sans-serif;
     transition: all 0.3s ease;
+    font-size: 23px;
 }
 .navbar.sticky{
     padding: 15px 0;
-    background: crimson;
+    background: rgb(192, 175, 178);
 }
 .navbar .max-width{
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-
 
 .navbar .logo a{
     color: #C445F4;
@@ -95,10 +96,7 @@ section{
     width: 223px;
     height: 80px; 
 }
-.navbar .logo a span{
-    color: crimson;
-    transition: all 0.3s ease;
-}
+
 .navbar.sticky .logo a span{
     color: #fff;
 }
@@ -172,15 +170,8 @@ section{
 /* home section styling */
 .home{
     display: flex;
-    /* background: url('img/Model@2x.png') 0% 0% no-repeat padding-box,
-    url('img/Triangle.png') 0% 0% no-repeat padding-box,
-    url('img/Triangle\ Glow.png') 0% 0% no-repeat padding-box,
-    url('img/Shadow.png') 0% 0% no-repeat padding-box; */
     color: #fff;
     min-height: 500px;
-    /* background-size: 520px 958px, 680px 589px, 680px 589px, 758px 758px;
-    background-position: 58px 396px 0 0, 266px 369px, 266px 369px, 67px 314px;
-    margin: 0 auto; */
     background-attachment: fixed;
     font-family: 'Source Sans Pro', sans-serif;
 }
@@ -335,6 +326,17 @@ section{
 
 /* responsive media query start */
 @media (max-width: 1104px) {
+    .left-side{
+        position: relative;
+        float: left;        
+    }
+
+    .right-side {
+        margin-top: 800px; 
+        position: absolute;
+        float: left;
+        clear:both;
+    }
 
 }
 
@@ -342,6 +344,7 @@ section{
     .max-width{
         padding: 0 50px;
     }
+
 }
 @media (max-width: 947px){
     .menu-btn{
@@ -390,14 +393,15 @@ section{
     }
 
     .home .home-content a{
-        font-size: 20px;
+        font-size: 18px;
     }
 }
 
 @media (max-width: 500px) {
 
 }
-/* The container <div> - needed to position the dropdown content */
+
+/* the dropdown content */
 .dropdown {
   position: relative;
   display: inline-block;
@@ -422,8 +426,8 @@ section{
 }
 
 /* Change color of dropdown links on hover */
-.dropdown-content a:hover {
-    background-color: blue;
+.dropdown-content li:hover {
+    color: rgb(163, 163, 236);
 }
 
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
