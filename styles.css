@@ -1,0 +1,578 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap');
+
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul,
+ol,
+li {
+    list-style: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: inherit;
+    font-size: inherit;
+}
+
+html,
+body {
+    height: 100%;
+    line-height: 1;
+    font-size: 16px;
+    color: #000;
+    
+}
+
+.wrapper {
+    min-width: 100%;
+    overflow: hidden;
+}
+
+body {
+  background: #292929 0% 0% no-repeat padding-box;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+
+
+
+/* all similar content styling codes */
+
+section{
+    padding: 100px 0;
+}
+.max-width{
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+}
+
+/* navbar styling */
+.navbar{
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    padding: 30px 0;
+    font-family: 'Source Sans Pro', sans-serif;
+    transition: all 0.3s ease;
+}
+.navbar.sticky{
+    padding: 15px 0;
+    background: crimson;
+}
+.navbar .max-width{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.navbar .logo a{
+    color: #C445F4;
+    font-size: 80px;
+    position: relative;
+    text-align: left;
+    left: 100px;
+    width: 223px;
+    height: 80px; 
+}
+.navbar .logo a span{
+    color: crimson;
+    transition: all 0.3s ease;
+}
+.navbar.sticky .logo a span{
+    color: #fff;
+}
+.navbar .menu li{
+    list-style: none;
+    display: inline-block;
+}
+.navbar .menu li a{
+    display: block;
+    color: #C445F4;
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 25px;
+    transition: color 0.3s ease;
+    text-transform: uppercase;
+}
+
+.first-el {
+    text-align: center;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 23px;
+    letter-spacing: 0.9px;
+    color: #EECAFC;
+    text-transform: uppercase;
+    padding: 8px;   
+    cursor: pointer;
+    display: none;
+   
+}
+.navbar .menu li a:hover{
+    color: #FF00FF;
+    
+    opacity: 0.24;
+    padding: 8px;
+    border-radius: 8px;
+}
+.navbar.sticky .menu li a:hover{
+    color: #fff;
+}
+.logo {
+    position: relative;
+}
+.logo .first-mini{
+    float: left; 
+    width: 96px;
+    height: 96px;
+    position: absolute;
+    z-index: 5;
+    top: 32;
+    left: 64;
+}
+.logo .second-mini{
+    float: left; 
+    width: 96px;
+    height: 96px;
+    position: absolute;
+    z-index: 7;
+    top: 32;
+    left: 64;    
+}
+
+.menu-btn {
+    color: #fff;
+    font-size: 23px;
+    cursor: pointer;
+    display: none;
+    padding: 8px; /* added */
+}
+
+
+/* home section styling */
+.home{
+    display: flex;
+    /* background: url('img/Model@2x.png') 0% 0% no-repeat padding-box,
+    url('img/Triangle.png') 0% 0% no-repeat padding-box,
+    url('img/Triangle\ Glow.png') 0% 0% no-repeat padding-box,
+    url('img/Shadow.png') 0% 0% no-repeat padding-box; */
+    color: #fff;
+    min-height: 500px;
+    /* background-size: 520px 958px, 680px 589px, 680px 589px, 758px 758px;
+    background-position: 58px 396px 0 0, 266px 369px, 266px 369px, 67px 314px;
+    margin: 0 auto; */
+    background-attachment: fixed;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+.home .max-width{
+  width: 100%;
+  display: flex;
+}
+.home .max-width .row{
+  margin-right: 0;
+}
+
+.img-title {    
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin: 0 auto;
+    width: 520px;
+    height: 958px;
+    
+}
+
+.img-1 {
+    position: absolute;
+    z-index: 6; 
+    width: 520px;
+    height: 958px;   
+    top: 58px;
+    left: 396px;
+}
+
+.img-2 {
+    position: absolute;
+    z-index: 5;
+    width: 680px;
+    height: 589px; 
+    opacity: 0.3;
+    top: 266px;
+    left: 369px;
+}
+.img-3 {
+    position: absolute;
+    z-index: 4;
+    width: 680px;
+    height: 589px;   
+    opacity: 0.3;
+    top: 266px;
+    left: 369px;
+}
+.img-4 {
+
+    position: absolute;
+    z-index: 3;
+    width: 758px;
+    height: 758px;    
+    top: 67px;
+    left: 314px;
+}
+
+
+.left-side {
+    width: 283px;
+}
+
+
+.home-content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.home .home-content a{
+    display: inline-block;
+    background: crimson;
+    color: #fff;
+    font-size: 25px;
+    padding: 12px 36px;
+    margin-top: 20px;
+    font-weight: 400;
+    border-radius: 6px;
+    border: 2px solid crimson;
+    transition: all 0.3s ease;
+}
+.home .home-content a:hover{
+    color: crimson;
+    background: none;
+}
+
+
+/* owl corousel */
+.carousel-wrapper {
+    padding: 30px;
+    width: 312px;
+    height: 166px;
+    margin: auto;
+    position: relative;
+    text-align: center;
+    font-family: 'Source Sans Pro', sans-serif;
+    z-index: 99;
+  }
+  
+  .owl-carousel .owl-nav {
+    overflow: hidden;
+    height: 0px;
+  }
+  
+  .owl-theme .owl-dots .owl-dot.active span,
+  .owl-theme .owl-dots .owl-dot:hover span {
+    background: #5110e9;
+  }
+  
+  
+  .owl-carousel .item {
+    text-align: center;
+  }
+  
+  .owl-carousel .nav-button {
+    height: 50px;
+    width: 25px;
+    cursor: pointer;
+    position: absolute;
+    top: 110px !important;
+  }
+  
+  .owl-carousel .owl-prev.disabled,
+  .owl-carousel .owl-next.disabled {
+  visibility: hidden;
+  }
+  
+  .owl-carousel .owl-prev {
+    left: -35px;
+  }
+  
+  .owl-carousel .owl-next {
+    right: -35px;
+  }
+  
+  .owl-theme .owl-nav [class*=owl-] {
+    color: #ffffff;
+    font-size: 39px;
+    background: #000000;
+    border-radius: 3px;
+  }
+  
+  .owl-carousel .prev-carousel:hover {
+    background-position: 0px -53px;
+  }
+  
+  .owl-carousel .next-carousel:hover {
+    background-position: -24px -53px;
+  }
+
+
+/* responsive media query start */
+@media (max-width: 1104px) {
+
+}
+
+@media (max-width: 991px) {
+    .max-width{
+        padding: 0 50px;
+    }
+}
+@media (max-width: 947px){
+    .menu-btn{
+        display: block;
+        z-index: 999;
+    }
+    .menu-btn i.active:before{
+        content: "\f00d";
+    }
+    .navbar .menu{
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        left: -100%;
+        top: 0;
+        background: #111;
+        text-align: center;
+        padding-top: 80px;
+        transition: all 0.3s ease;
+    }
+    .navbar .menu.active{
+        left: 0;
+    }
+    .navbar .menu li{
+        display: block;
+    }
+    .navbar .menu li a{
+        display: inline-block;
+        margin: 20px 0;
+        font-size: 25px;
+    }
+
+    .home .home-content a{
+        font-size: 23px;
+        padding: 10px 30px;
+    }
+    .max-width{
+        max-width: 930px;
+    }
+
+}
+
+@media (max-width: 690px) {
+    .max-width{
+        padding: 0 23px;
+    }
+
+    .home .home-content a{
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 500px) {
+
+}
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  border-radius: 10px;  
+}
+
+/* Links inside the dropdown */
+.dropdown-content > li{
+  color: #000;
+  padding: 12px 16px;  
+  display: block;  
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+    background-color: blue;
+}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {
+    display:block;
+}
+
+
+/* video */
+
+.player {
+    max-width: 750px;
+    border: 5px solid rgba(0,0,0,0.2);
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    position: relative;
+    font-size: 0;
+    overflow: hidden;
+  }
+  
+  /* This css is only applied when fullscreen is active. */
+  .player:fullscreen {
+    max-width: none;
+    width: 100%;
+  }
+  
+  .player:-webkit-full-screen {
+    max-width: none;
+    width: 100%;
+  }
+  
+  .player__video {
+    width: 100%;
+  }
+  
+  .player__button {
+    background: none;
+    border: 0;
+    line-height: 1;
+    color: white;
+    text-align: center;
+    outline: 0;
+    padding: 0;
+    cursor: pointer;
+    max-width: 50px;
+  }
+  
+  .player__button:focus {
+    border-color: #ffc600;
+  }
+  
+  .player__slider {
+    width: 10px;
+    height: 30px;
+  }
+  
+  .player__controls {
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    transform: translateY(100%) translateY(-5px);
+    transition: all .3s;
+    flex-wrap: wrap;
+    background: rgba(0,0,0,0.1);
+  }
+  
+  .player:hover .player__controls {
+    transform: translateY(0);
+  }
+  
+  .player:hover .progress {
+    height: 15px;
+  }
+  
+  .player__controls > * {
+    flex: 1;
+  }
+  
+  .progress {
+    flex: 10;
+    position: relative;
+    display: flex;
+    flex-basis: 100%;
+    height: 5px;
+    transition: height 0.3s;
+    background: rgba(0,0,0,0.5);
+    cursor: ew-resize;
+  }
+  
+  .progress__filled {
+    width: 50%;
+    background: #ffc600;
+    flex: 0;
+    flex-basis: 50%;
+  }
+  
+  /* unholy css to style input type="range" */
+  
+  input[type=range] {
+    -webkit-appearance: none;
+    background: transparent;
+    width: 100%;
+    margin: 0 5px;
+  }
+  
+  input[type=range]:focus {
+    outline: none;
+  }
+  
+  input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 8.4px;
+    cursor: pointer;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0), 0 0 1px rgba(13, 13, 13, 0);
+    background: rgba(255,255,255,0.8);
+    border-radius: 1.3px;
+    border: 0.2px solid rgba(1, 1, 1, 0);
+  }
+  
+  input[type=range]::-webkit-slider-thumb {
+    height: 15px;
+    width: 15px;
+    border-radius: 50px;
+    background: #ffc600;
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -3.5px;
+    box-shadow:0 0 2px rgba(0,0,0,0.2);
+  }
+  
+  input[type=range]:focus::-webkit-slider-runnable-track {
+    background: #bada55;
+  }
+  
+  input[type=range]::-moz-range-track {
+    width: 100%;
+    height: 8.4px;
+    cursor: pointer;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0), 0 0 1px rgba(13, 13, 13, 0);
+    background: #ffffff;
+    border-radius: 1.3px;
+    border: 0.2px solid rgba(1, 1, 1, 0);
+  }
+  
+  input[type=range]::-moz-range-thumb {
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0), 0 0 0 rgba(13, 13, 13, 0);
+    height: 15px;
+    width: 15px;
+    border-radius: 50px;
+    background: #ffc600;
+    cursor: pointer;
+  }
