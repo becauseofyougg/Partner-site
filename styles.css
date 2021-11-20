@@ -580,3 +580,17 @@ section{
     background: #ffc600;
     cursor: pointer;
   }
+
+  .owl-options h2 {
+      color: #fff;
+      font-family: 'Source Sans Pro', sans-serif;
+      font-size: 23px;
+      text-align: left;
+  }
+
+  .owl-options h3 {
+    color: #C445F4;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 18px;
+    text-align: right;
+}

@@ -28,6 +28,8 @@ $(document).ready(function(){
             items: 1,
             autoplay:true,
             dots: true,
+            stageClass: 'owl-options',
+            
       });
 });
 
@@ -108,39 +110,27 @@ window.onclick = function(event) {
     progress.addEventListener('mousemove', (e) => mousedown && scrub(e));
     progressBar.addEventListener('mousedown', () => mousedown = true);
     progressBar.addEventListener('mouseup', () => mousedown = false);
-    
 
 
-// customURL = 'https://makeup-api.herokuapp.com/api/v1/products.json?brand=maybelline';
-
-// let carousel = $('.owl-carousel');
-
-// let filteredList = Array.prototype
-//   .map((n,r) => {
-//     return {
-//       name: n.name,
-//       price: r.price
-//     };
-//   })
-//   .filter(r => {
-//     return parseFloat(r.price) <= 5.0;
-//   }); 
-
-  
-// function sendRequest(method, url,body = null){
-//   return fetch(url)
-//         .then(response => {
-//           return response.json()
-//         })
-// }
-// let carousel = $('.owl-carousel')
-// requestURL = 'abc.com'
-// sendRequest('GET',requestURL)
-// .then(data => {
-//   const costFiveOrLessItems = data.filter(...);
-  //select carousel
-  //iterate over costFiveOrLessItems 
-    //create element for each index with data from object
-    //add it to the carousel     
-
-// .catch(err => console.log(err))
+let customURL = 'https://makeup-api.herokuapp.com/api/v1/products.json?brand=maybelline';
+function sendRequest(method, url,body = null){
+  return fetch(url)
+        .then(response => {
+          return response.json()
+        })
+}
+sendRequest('GET',customURL)
+.then(response => {
+    let getContent = response.map(function(e){
+      return { name: e["name"], price: e["price"] };
+    })
+    .filter(e => e.price < 5);
+    let carouselItems = document.getElementById('owl-items');
+    for(let key in getContent){
+      carouselItems.innerHTML += `
+        <h2>${getContent[key].name}</h2>
+        <h3>${getContent[key].price}</h3>
+      `
+    }
+})
+.catch(err => console.log(err))
